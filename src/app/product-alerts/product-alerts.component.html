@@ -1,0 +1,5 @@
+<p *ngIf="product.price > 700">
+  <!--<button (click)="notifyAlert()">Notify Me</button>-->
+  <!--直接调用 ProductAlertsComponent.notifyOut 的 emit() 方法传出事件-->
+  <button (click)="notifyOut.emit()">Notify Me</button>
+</p>
