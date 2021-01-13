@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 import {products} from '../products';
+import {MyTestableClass} from '../decorator/MyTestableClass.modal';
 
 @Component({
   selector: 'app-product-list',
@@ -12,6 +13,11 @@ export class ProductListComponent {
 
   share(product) {
     window.alert('The product has been shared!' + product.name);
+    /*window.alert(MyTestableClass.isTestable);
+    window.alert(MyTestableClass.testname);
+    window.alert(MyTestableClass.testname1);*/
+    let myTestableClass = new MyTestableClass();
+    window.alert(myTestableClass.foo());
   }
 
   onNotify() {
